@@ -10,7 +10,7 @@
         <?php 
             if ( isset($_GET['activate'])){
                 //si firstname et lastname sont defini -> les recupère et affiche le echo
-                if (isset($_GET['firstname']) && isset($_GET['lastname']) && (isset($_GET['age']))) {
+                if (isset($_GET['firstname']) && isset($_GET['lastname']) && isset($_GET['age']) && is_numeric($_GET['age']) ) {
                     echo '<p>' . $_GET['firstname'] . ' ' . $_GET['lastname'] . ' est bien présent !</p>';
                 }else {
                     echo '<p>Un des paramètres n\'est pas defini</p>';
